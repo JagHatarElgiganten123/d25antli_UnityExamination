@@ -7,16 +7,18 @@ public class DeleteBalls : MonoBehaviour
 {
     private int points;
     [SerializeField] private int ballsLeft;
+    private int ballsToDelete;
     [SerializeField] private TextMeshProUGUI ballsGUI;
     private void Awake()
     {
         points = 0;
+        ballsToDelete = ballsLeft;
         ballsGUI.text = ballsLeft.ToString();
     }
 
     private void Update()
     {
-        if (points == 3)
+        if (points == ballsToDelete)
         {
             SceneManager.LoadScene("Level 2");
         }
