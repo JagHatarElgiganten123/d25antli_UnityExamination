@@ -1,14 +1,17 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DeleteBalls : MonoBehaviour
 {
     private int points;
-
+    [SerializeField] private int ballsLeft;
+    [SerializeField] private TextMeshProUGUI ballsGUI;
     private void Awake()
     {
         points = 0;
+        ballsGUI.text = ballsLeft.ToString();
     }
 
     private void Update()
@@ -25,6 +28,8 @@ public class DeleteBalls : MonoBehaviour
         {
             Destroy(other.gameObject);
             points++;
+            ballsLeft--;
+            ballsGUI.text = ballsLeft.ToString();
         }
     }
 }
