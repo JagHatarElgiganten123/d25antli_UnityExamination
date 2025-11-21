@@ -20,7 +20,7 @@ public class DeleteBalls : MonoBehaviour
     {
         if (points == ballsToDelete)
         {
-            SceneManager.LoadScene("Level 2");
+            SceneManager.LoadScene("Win");
         }
     }
 
