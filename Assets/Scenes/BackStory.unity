@@ -774,7 +774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You''re n a mysterious world where you have to push balls down a platfrom.
+  m_text: 'You wake up in a mysterious world where you have to push balls off a platfrom.
 
     You''re
     not really sure why but you decide to just play along.'
